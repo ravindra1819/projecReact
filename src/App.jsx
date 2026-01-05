@@ -5,17 +5,27 @@ import './App.css'
 import TodoPagination from './components/TodoPagination'
 import UseEffectDemo from './components/EffectDemo'
 import UseRefDemo from './components/RefDemo'
+import Parent from './components/UseContext/PropDrilling/Parent'
+import BankAccount from './components/UseReducer/BankAccount'
+import InfiniteScrollDemo from './components/InfiniteScrollDemo'
 
 
 function App() {
 
+  const message = "Hello this message is from App";
+
   return (
     <>
       <UseEffectDemo />
-      <UseRefDemo/>
+      <InfiniteScrollDemo />
+      <UseRefDemo />
+      <div className='m-5'>
+        <BankAccount />
+      </div>
+      <Parent message={message} />
       <TodoPagination />
     </>
-  )
+  );
 }
 
 export default App
